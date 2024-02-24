@@ -3,7 +3,9 @@ const app = express();
 
 class Tokeniser {
     constructor(str) {
+        console.log("Input string:", str); // Debugging: Log input string
         this.tokens = str.split(/\W+/);
+        console.log("Tokens:", this.tokens); // Debugging: Log tokens array
         this.nextToRead = 0;
     }
     read() {
@@ -16,6 +18,7 @@ class Tokeniser {
 }
 
 function problem_0(input) {
+    console.log("Input to problem_0:", input); // Debugging: Log input
     var inp = new Tokeniser(input);
     var out = "";
     var tt = parseInt(inp.read());
@@ -39,8 +42,10 @@ function problem_0(input) {
     return out;
 }
 
-app.post('/problem3', express.text(), (req, res) => {
-    const input = req.body;
+// Endpoint for /problem3
+app.post('/problem3', express.json(), (req, res) => {
+    const input = req.body.input;
+    console.log("Received input:", input); // Debugging: Log received input
     const result = problem_0(input);
     res.send(result);
 });
