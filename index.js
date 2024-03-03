@@ -13,7 +13,7 @@ app.post('/problem3', express.json(), (req, res) => {
 });
 
 app.get('/', express.json(), (req, res) => {
-    res.send("Hello Nayak!");
+    res.send("Hello Nayak! 10:31");
 });
 
 app.listen(process.env.PORT || 3000, () => {
