@@ -38,7 +38,7 @@ app.post('/', express.json(), (req, res) => {
 });
 
 app.get('/', express.json(), (req, res) => {
-    res.send("2");
+    res.send("3");
 });
 
 
