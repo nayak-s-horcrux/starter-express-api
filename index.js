@@ -14,7 +14,7 @@ app.post('/problem', express.json(), (req, res) => {
 });
 
 app.get('/', express.json(), (req, res) => {
-    res.send("Hello Nayak! - 3");
+    res.send("Hello Nayak! - 4");
 });
 
 const PORT = process.env.PORT || 8000;
